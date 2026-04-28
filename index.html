@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engagement Invitation</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: #eaf2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+#enter {
+  background: #6c8ea3;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#card {
+  display: none;
+  text-align: center;
+}
+
+img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+a {
+  display: block;
+  margin-top: 10px;
+  color: #333;
+}
+</style>
+</head>
+
+<body>
+
+<button id="enter">Open Invitation</button>
+
+<div id="card">
+  <img src="invitation.png" alt="invitation">
+  <p>We are waiting for you 💙</p>
+  <a href="https://maps.app.goo.gl/SqxRXhojmjF8PwV38" target="_blank">
+    Open Location
+  </a>
+</div>
+
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.getElementById("enter").onclick = function() {
+  document.getElementById("enter").style.display = "none";
+  document.getElementById("card").style.display = "block";
+  document.getElementById("music").play();
+};
+</script>
+
+</body>
+</html>
